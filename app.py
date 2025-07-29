@@ -13,7 +13,7 @@ import uuid
 if not firebase_admin._apps:
 #    firebase_key = json.loads(os.environ["FIREBASE_KEY"])
     firebase_key = dict(st.secrets["FIREBASE_KEY"])
-    cred = credentials.Certificate("firebase_key")
+    cred = credentials.Certificate(firebase_key)
     firebase_admin.initialize_app(cred, {
 #        'storageBucket': 'class-recorder-42c02.firebasestorage.app'
         'storageBucket': firebase_key["storageBucket"]
