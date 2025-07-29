@@ -8,6 +8,7 @@ from firebase_admin import credentials, auth, storage, firestore
 import tempfile
 import uuid
 
+
 # Firebase 초기화
 if not firebase_admin._apps:
     firebase_service_account = json.loads(os.environ["FIREBASE_SERVICE_ACCOUNT"])
