@@ -1,3 +1,3 @@
 import streamlit as st
 
-st.t
+st.title('연수 중')
