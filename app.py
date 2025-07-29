@@ -11,8 +11,8 @@ import uuid
 
 # Firebase 초기화
 if not firebase_admin._apps:
-    firebase_service_account = json.loads(os.environ["FIREBASE_SERVICE_ACCOUNT"])
-    cred = credentials.Certificate("firebase_service_account")
+    firebase_key = json.loads(os.environ["FIREBASE_KEY"])
+    cred = credentials.Certificate("firebase_key")
     firebase_admin.initialize_app(cred, {
         'storageBucket': 'class-recorder-42c02.firebasestorage.app'
     })
